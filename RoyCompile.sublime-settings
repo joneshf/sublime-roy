@@ -1,0 +1,10 @@
+{
+    // Path to the node binary.  Defaults to Sublime's path.
+    "node_path": "",
+
+    // Path to the roy binary.  Defaults to Sublime's path.
+    "roy_path": "",
+
+    // The actual binary.
+    "roy_bin": ""
+}
