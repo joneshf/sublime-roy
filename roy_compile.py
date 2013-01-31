@@ -52,7 +52,7 @@ class RoyCompile(sublime_plugin.TextCommand):
         if self._text_selected():
             region = self.view.sel()[0]
         else:
-            region = sublime.Region(0)
+            region = sublime.Region(0, self.view.size())
 
         return self.view.substr(region)
 
