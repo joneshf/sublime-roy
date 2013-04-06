@@ -10,7 +10,7 @@ This is greatly inspired by [@surjikal][surjikal]'s [Coffee Compile][coffee-comp
 
 Compile the entire file by not selecting any text (or all the text).
 Compile a section by selecting just that section.
-Keyboard shortcut `Ctrl-Shift-R`
+Keyboard shortcut `ctrl-shift-R`
 Command Pallette integration `Roy Compile`
 Context menu `right click`
 
@@ -18,7 +18,7 @@ Context menu `right click`
 
 ### Package Control
 
-Coming soon.
+Now available in [@wbond][wbond]'s [package control][package-control].  Just bring up the package control menu in sublime (default `ctrl-shift-p`), and enter `Package Control: Install Package`, search for `RoyCompile`.
 
 ### Manual
 
@@ -47,3 +47,5 @@ $ git clone https://github.com/joneshf/RoyCompile
 
 [surjikal]: https://github.com/surjikal
 [coffee-compile]: https://github.com/surjikal/sublime-coffee-compile
+[wbond]: https://github.com/wbond
+[package-control]: https://github.com/wbond/package_control_channel
