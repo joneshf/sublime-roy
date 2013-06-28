@@ -1,10 +1,12 @@
-# Roy Compile
-
-Compile Roy to Javascript without leaving sublime.
+# Roy Sublime Text 2 package.
 
 ## Inspiration
 
 This is greatly inspired by [@surjikal][surjikal]'s [Coffee Compile][coffee-compile]
+
+## Features
+
+* Transpilation to js
 
 ## Usage
 
