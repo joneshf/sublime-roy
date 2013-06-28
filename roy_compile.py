@@ -5,11 +5,11 @@ import sublime
 import sublime_plugin
 
 
-class RoyCompile(sublime_plugin.TextCommand):
+class Roy(sublime_plugin.TextCommand):
 
     ROY = 'roy'
-    SETTINGS = sublime.load_settings('RoyCompile.sublime-settings')
-    WINDOW_NAME = 'roycompile_output'
+    SETTINGS = sublime.load_settings('Roy.sublime-settings')
+    WINDOW_NAME = 'roy_output'
 
     def run(self, edit):
         text = self._text_to_compile()
@@ -43,7 +43,7 @@ class RoyCompile(sublime_plugin.TextCommand):
         roy = self.SETTINGS.get('roy_path')
         path = os.getenv('PATH')
 
-        return '{0}{1}'.format(path, os.pathsep.join(filter(None, (node, roy))))
+        return os.pathsep.join(filter(None, (node, path, roy)))
 
     def _text_selected(self):
         return any(not selected.empty() for selected in self.view.sel())

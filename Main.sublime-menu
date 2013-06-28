@@ -12,25 +12,25 @@
                 "children":
                 [
                     {
-                        "caption": "RoyCompile",
+                        "caption": "Roy",
                         "children":
                         [
                             {
                                 "caption": "Settings - Default",
                                 "command": "open_file",
-                                "args": {"file": "${packages}/RoyCompile/RoyCompile.sublime-settings"}
+                                "args": {"file": "${packages}/Roy/Roy.sublime-settings"}
                             },
                             {
                                 "caption": "Settings - User",
                                 "command": "open_file",
-                                "args": {"file": "${packages}/User/RoyCompile.sublime-settings"}
+                                "args": {"file": "${packages}/User/Roy.sublime-settings"}
                             },
                             {"caption": "-"},
                             {
                                 "caption": "Key Bindings - Default",
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/RoyCompile/Default (Linux).sublime-keymap",
+                                    "file": "${packages}/Roy/Default (Linux).sublime-keymap",
                                     "platform": "Linux"
                                 }
                             },
@@ -46,7 +46,7 @@
                                 "caption": "Key Bindings - Default",
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/RoyCompile/Default (OSX).sublime-keymap",
+                                    "file": "${packages}/Roy/Default (OSX).sublime-keymap",
                                     "platform": "OSX"
                                 }
                             },
@@ -62,7 +62,7 @@
                                 "caption": "Key Bindings - Default",
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/RoyCompile/Default (Windows).sublime-keymap",
+                                    "file": "${packages}/Roy/Default (Windows).sublime-keymap",
                                     "platform": "Windows"
                                 }
                             },

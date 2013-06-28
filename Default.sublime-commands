@@ -1,6 +1,6 @@
 [
     {
-        "caption": "RoyCompile: Compile Current File",
+        "caption": "Roy: Compile Current File",
         "command": "roy_compile",
         "args": {}
     }
