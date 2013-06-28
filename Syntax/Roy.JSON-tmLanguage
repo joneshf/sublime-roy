@@ -18,6 +18,14 @@
       }
     },
     {
+      "name": "let.binding.roy",
+      "match": "\\s*(let) (.*?)\\s*=(.*)?",
+      "captures": {
+        "1": { "name": "keyword.other.let.roy" },
+        "2": { "name": "entity.name.function.roy" }
+      }
+    },
+    {
       "include": "#keywords"
     }
   ],

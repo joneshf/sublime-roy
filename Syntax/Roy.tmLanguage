@@ -41,6 +41,25 @@
 			<string>string.roy</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.let.roy</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.roy</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\s*(let) (.*?)\s*=(.*)?</string>
+			<key>name</key>
+			<string>let.binding.roy</string>
+		</dict>
+		<dict>
 			<key>include</key>
 			<string>#keywords</string>
 		</dict>

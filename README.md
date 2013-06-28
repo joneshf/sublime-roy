@@ -6,6 +6,7 @@ This is greatly inspired by [@surjikal][surjikal]'s [Coffee Compile][coffee-comp
 
 ## Features
 
+* Syntax highlighting
 * Transpilation to js
 
 ## Usage
