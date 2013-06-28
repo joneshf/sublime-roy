@@ -5,7 +5,9 @@ import sublime
 import sublime_plugin
 
 
-class Roy(sublime_plugin.TextCommand):
+# This class name maps to the command name in the menu,
+# where PascalCase and underscore_case are swapped.
+class RoyCompile(sublime_plugin.TextCommand):
 
     ROY = 'roy'
     SETTINGS = sublime.load_settings('Roy.sublime-settings')

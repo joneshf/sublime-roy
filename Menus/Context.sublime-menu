@@ -1,0 +1,14 @@
+[
+  {
+    "caption": "-"
+  },
+  {
+    "caption": "Roy",
+    "children": [
+      {
+        "caption": "compile",
+        "command": "roy_compile"
+      }
+    ]
+  }
+]
