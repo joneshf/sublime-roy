@@ -1,0 +1,35 @@
+{ "name": "roy",
+  "scopeName": "source.roy",
+  "fileTypes": ["roy"],
+  "patterns": [
+    {
+      "name": "comment.line.double-slash.roy",
+      "match": "//.*$"
+    },
+    {
+      "name": "string.roy",
+      "begin": "\"|'",
+      "beginCaptures": {
+          "0": { "name": "punctuation.definition.string.begin.roy" }
+      },
+      "end": "\"|'",
+      "endCaptures": {
+          "0": { "name": "punctuation.definition.string.end.roy" }
+      }
+    },
+    {
+      "include": "#keywords"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "constant.language.boolean.roy",
+          "match": "\\b(true|false)\\b"
+        }
+      ]
+    }
+  },
+  "uuid": "7943d659-7d53-422f-86a5-822900a41b82"
+}
