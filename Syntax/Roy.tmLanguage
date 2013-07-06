@@ -17,6 +17,12 @@
 			<string>comment.line.double-slash.roy</string>
 		</dict>
 		<dict>
+			<key>match</key>
+			<string>^#!.*$</string>
+			<key>name</key>
+			<string>comment.line.number-sign.roy</string>
+		</dict>
+		<dict>
 			<key>begin</key>
 			<string>"|'</string>
 			<key>beginCaptures</key>
@@ -53,9 +59,24 @@
 					<key>name</key>
 					<string>entity.name.function.roy</string>
 				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.roy</string>
+				</dict>
+				<key>7</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.type.roy</string>
+				</dict>
+				<key>9</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.type.roy</string>
+				</dict>
 			</dict>
 			<key>match</key>
-			<string>\s*(let) (.*?)\s*=(.*)?</string>
+			<string>\s*(let)\s+(.+?)(\s+\(?\s*((.+?)(\s*:\s+(.+?))?)\s*\)?\s+)*(\s*:\s+(.+?))?=</string>
 			<key>name</key>
 			<string>let.binding.roy</string>
 		</dict>

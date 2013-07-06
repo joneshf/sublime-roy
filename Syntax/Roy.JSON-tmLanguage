@@ -7,6 +7,10 @@
       "match": "//.*$"
     },
     {
+      "name": "comment.line.number-sign.roy",
+      "match": "^#!.*$"
+    },
+    {
       "name": "string.roy",
       "begin": "\"|'",
       "beginCaptures": {
@@ -19,10 +23,13 @@
     },
     {
       "name": "let.binding.roy",
-      "match": "\\s*(let) (.*?)\\s*=(.*)?",
+      "match": "\\s*(let)\\s+(.+?)(\\s+\\(?\\s*((.+?)(\\s*:\\s+(.+?))?)\\s*\\)?\\s+)*(\\s*:\\s+(.+?))?=",
       "captures": {
         "1": { "name": "keyword.other.let.roy" },
-        "2": { "name": "entity.name.function.roy" }
+        "2": { "name": "entity.name.function.roy" },
+        "5": { "name": "variable.parameter.roy" },
+        "7": { "name": "entity.name.type.roy" },
+        "9": { "name": "entity.name.type.roy" }
       }
     },
     {
