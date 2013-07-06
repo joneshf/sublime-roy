@@ -1,3 +1,15 @@
 [
-    {"keys": ["alt+shift+r"], "command": "roy_compile"}
+  {
+    "keys": [
+      "alt+shift+r"
+    ],
+    "command": "roy_compile",
+    "context": [
+      {
+        "key": "selector",
+        "operator": "equal",
+        "operand": "roy"
+      }
+    ]
+  }
 ]
