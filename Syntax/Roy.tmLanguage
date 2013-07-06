@@ -76,7 +76,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\s*(let)\s+(.+?)(\s+\(?\s*((.+?)(\s*:\s+(.+?))?)\s*\)?\s+)*(\s*:\s+(.+?))?=</string>
+			<string>\s*(let)\s+(.+?)(\s+\(?\s*((.+?)(\s*:\s+(.+?))?)\s*\)?\s+)*(\s*:\s+(.+?))?\s*=</string>
 			<key>name</key>
 			<string>let.binding.roy</string>
 		</dict>
@@ -103,6 +103,10 @@
 			<key>include</key>
 			<string>#keywords</string>
 		</dict>
+		<dict>
+			<key>include</key>
+			<string>#numeric</string>
+		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
@@ -115,6 +119,18 @@
 					<string>\b(true|false)\b</string>
 					<key>name</key>
 					<string>constant.language.boolean.roy</string>
+				</dict>
+			</array>
+		</dict>
+		<key>numeric</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\b([+-]?\d+(\.\d+)?([Ee][+-]?\d+)?)\b</string>
+					<key>name</key>
+					<string>constant.numeric.roy</string>
 				</dict>
 			</array>
 		</dict>

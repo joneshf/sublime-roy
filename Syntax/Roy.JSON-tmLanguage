@@ -23,7 +23,7 @@
     },
     {
       "name": "let.binding.roy",
-      "match": "\\s*(let)\\s+(.+?)(\\s+\\(?\\s*((.+?)(\\s*:\\s+(.+?))?)\\s*\\)?\\s+)*(\\s*:\\s+(.+?))?=",
+      "match": "\\s*(let)\\s+(.+?)(\\s+\\(?\\s*((.+?)(\\s*:\\s+(.+?))?)\\s*\\)?\\s+)*(\\s*:\\s+(.+?))?\\s*=",
       "captures": {
         "1": { "name": "keyword.other.let.roy" },
         "2": { "name": "entity.name.function.roy" },
@@ -42,6 +42,9 @@
     },
     {
       "include": "#keywords"
+    },
+    {
+      "include": "#numeric"
     }
   ],
   "repository": {
@@ -50,6 +53,14 @@
         {
           "name": "constant.language.boolean.roy",
           "match": "\\b(true|false)\\b"
+        }
+      ]
+    },
+    "numeric": {
+      "patterns": [
+        {
+          "name": "constant.numeric.roy",
+          "match": "\\b([+-]?\\d+(\\.\\d+)?([Ee][+-]?\\d+)?)\\b"
         }
       ]
     }
