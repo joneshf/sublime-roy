@@ -8,7 +8,7 @@
       {
         "key": "selector",
         "operator": "equal",
-        "operand": "roy"
+        "operand": "source.roy"
       }
     ]
   }
