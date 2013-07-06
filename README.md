@@ -13,7 +13,7 @@ This is greatly inspired by [@surjikal][surjikal]'s [Coffee Compile][coffee-comp
 
 Compile the entire file by not selecting any text (or all the text).
 Compile a section by selecting just that section.
-Keyboard shortcut `ctrl-shift-R`
+Keyboard shortcut `alt-shift-R`
 Command Pallette integration `Roy Compile`
 Context menu `right click`
 
