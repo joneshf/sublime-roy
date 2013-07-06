@@ -18,63 +18,37 @@
                             {
                                 "caption": "Settings - Default",
                                 "command": "open_file",
-                                "args": {"file": "${packages}/Roy/Roy.sublime-settings"}
+                                "args": {
+                                    "file": "${packages}/Roy/Roy.sublime-settings"
+                                }
                             },
                             {
                                 "caption": "Settings - User",
                                 "command": "open_file",
-                                "args": {"file": "${packages}/User/Roy.sublime-settings"}
+                                "args": {
+                                    "file": "${packages}/User/Roy.sublime-settings"
+                                }
                             },
-                            {"caption": "-"},
+                            {
+                                "caption": "-"
+                            },
                             {
                                 "caption": "Key Bindings - Default",
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/Roy/Keymaps/Default (Linux).sublime-keymap",
-                                    "platform": "Linux"
+                                    "file": "${packages}/Roy/Keymaps/Default.sublime-keymap",
                                 }
                             },
                             {
                                 "caption": "Key Bindings - User",
                                 "command": "open_file",
                                 "args": {
-                                    "file": "${packages}/User/Default (Linux).sublime-keymap",
-                                    "platform": "Linux"
+                                    "file": "${packages}/User/Default.sublime-keymap",
                                 }
                             },
                             {
-                                "caption": "Key Bindings - Default",
-                                "command": "open_file",
-                                "args": {
-                                    "file": "${packages}/Roy/Keymaps/Default (OSX).sublime-keymap",
-                                    "platform": "OSX"
-                                }
-                            },
-                            {
-                                "caption": "Key Bindings - User",
-                                "command": "open_file",
-                                "args": {
-                                    "file": "${packages}/User/Default (OSX).sublime-keymap",
-                                    "platform": "OSX"
-                                }
-                            },
-                            {
-                                "caption": "Key Bindings - Default",
-                                "command": "open_file",
-                                "args": {
-                                    "file": "${packages}/Roy/Keymaps/Default (Windows).sublime-keymap",
-                                    "platform": "Windows"
-                                }
-                            },
-                            {
-                                "caption": "Key Bindings - User",
-                                "command": "open_file",
-                                "args": {
-                                    "file": "${packages}/User/Default (Windows).sublime-keymap",
-                                    "platform": "Windows"
-                                }
-                            },
-                            {"caption": "-"}
+                                "caption": "-"
+                            }
                         ]
                     }
                 ]
