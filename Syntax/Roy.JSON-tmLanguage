@@ -33,6 +33,14 @@
       }
     },
     {
+      "name": "type.roy",
+      "match": "\\s*(type)\\s+(.+?)\\s+=",
+      "captures": {
+        "1": { "name": "keyword.other.type.roy" },
+        "2": { "name": "entity.name.type.roy" }
+      }
+    },
+    {
       "include": "#keywords"
     }
   ],

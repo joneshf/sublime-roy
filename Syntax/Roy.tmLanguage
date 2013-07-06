@@ -81,6 +81,25 @@
 			<string>let.binding.roy</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.type.roy</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.type.roy</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\s*(type)\s+(.+?)\s+=</string>
+			<key>name</key>
+			<string>type.roy</string>
+		</dict>
+		<dict>
 			<key>include</key>
 			<string>#keywords</string>
 		</dict>
