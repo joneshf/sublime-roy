@@ -86,6 +86,30 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
+					<string>keyword.other.lambda.roy</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>variable.parameter.roy</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.lambda.roy</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\s*(\\)\s*(.+?)*\s*(-&gt;)\s*</string>
+			<key>name</key>
+			<string>lambda.roy</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
 					<string>keyword.other.type.roy</string>
 				</dict>
 				<key>2</key>
@@ -107,9 +131,25 @@
 			<key>include</key>
 			<string>#numeric</string>
 		</dict>
+		<dict>
+			<key>include</key>
+			<string>#class</string>
+		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
+		<key>class</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\b(Array|Function|Int|Number|Object|String)\b</string>
+					<key>name</key>
+					<string>support.type.roy</string>
+				</dict>
+			</array>
+		</dict>
 		<key>keywords</key>
 		<dict>
 			<key>patterns</key>
