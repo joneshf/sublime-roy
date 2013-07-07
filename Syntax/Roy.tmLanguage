@@ -76,7 +76,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\s*(let)\s+(.+?)(\s+\(?\s*((.+?)(\s*:\s+(.+?))?)\s*\)?\s+)*(\s*:\s+(.+?))?\s*=</string>
+			<string>(let)\s+(.+?)(\s+\(?\s*((.+?)(\s*:\s+(.+?))?)\s*\)?\s+)*(\s*:\s+(.+?))?\s*=</string>
 			<key>name</key>
 			<string>let.binding.roy</string>
 		</dict>
@@ -100,7 +100,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\s*(\\|λ)\s*(.+?)*\s*</string>
+			<string>(\\|λ)\s*(.+?)?\s*(-&gt;|→)</string>
 			<key>name</key>
 			<string>lambda.roy</string>
 		</dict>

@@ -23,7 +23,7 @@
     },
     {
       "name": "let.binding.roy",
-      "match": "\\s*(let)\\s+(.+?)(\\s+\\(?\\s*((.+?)(\\s*:\\s+(.+?))?)\\s*\\)?\\s+)*(\\s*:\\s+(.+?))?\\s*=",
+      "match": "(let)\\s+(.+?)(\\s+\\(?\\s*((.+?)(\\s*:\\s+(.+?))?)\\s*\\)?\\s+)*(\\s*:\\s+(.+?))?\\s*=",
       "captures": {
         "1": { "name": "keyword.other.let.roy" },
         "2": { "name": "entity.name.function.roy" },
@@ -34,7 +34,7 @@
     },
     {
       "name": "lambda.roy",
-      "match": "\\s*(\\\\|λ)\\s*(.+?)*\\s*",
+      "match": "(\\\\|λ)\\s*(.+?)?\\s*(->|→)",
       "captures": {
         "1": { "name": "keyword.other.lambda.roy" },
         "2": { "name": "variable.parameter.roy" },
