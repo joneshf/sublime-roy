@@ -43,10 +43,31 @@
     },
     {
       "name": "type.roy",
-      "match": "\\s*(type)\\s+(.+?)\\s+=",
+      "match": "(type)\\s+(.+?)\\s+=",
       "captures": {
         "1": { "name": "keyword.other.type.roy" },
         "2": { "name": "entity.name.type.roy" }
+      }
+    },
+    {
+      "name": "function.math.roy",
+      "match": "\\bMath\\.(abs|acos|asin|atan|atan2|ceil|cos|exp|floor|imul|log|max|min|pow|random|round|sin|sqrt|tan|toSource)\\b",
+      "captures": {
+        "1": { "name": "support.function.math.roy"}
+      }
+    },
+    {
+      "name": "constants.math.roy",
+      "match": "\\bMath\\.(E|LN2|LN10|LOG2E|LOG10E|PI|SQRT1_2|SQRT2)\\b",
+      "captures": {
+        "1": { "name": "support.constant.math.roy"}
+      }
+    },
+    {
+      "name": "console.roy",
+      "match": "\\bconsole\\.(assert|debug|log|dir|error|group|groupCollapsed|groupEnd|info|log|time|timeEnd|trace|warn)\\b",
+      "captures": {
+        "1": { "name": "support.function.console.roy"}
       }
     },
     {
@@ -65,6 +86,14 @@
         {
           "name": "constant.language.boolean.roy",
           "match": "\\b(true|false)\\b"
+        },
+        {
+          "name": "keyword.roy",
+          "match": "\\b(data|let|type)\\b"
+        },
+        {
+          "name": "keyword.control.roy",
+          "match": "\\b(case|do|else|if|match|then)\\b"
         }
       ]
     },

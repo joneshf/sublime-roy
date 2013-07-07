@@ -119,9 +119,51 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\s*(type)\s+(.+?)\s+=</string>
+			<string>(type)\s+(.+?)\s+=</string>
 			<key>name</key>
 			<string>type.roy</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.function.math.roy</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\bMath\.(abs|acos|asin|atan|atan2|ceil|cos|exp|floor|imul|log|max|min|pow|random|round|sin|sqrt|tan|toSource)\b</string>
+			<key>name</key>
+			<string>function.math.roy</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.constant.math.roy</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\bMath\.(E|LN2|LN10|LOG2E|LOG10E|PI|SQRT1_2|SQRT2)\b</string>
+			<key>name</key>
+			<string>constants.math.roy</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.function.console.roy</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>\bconsole\.(assert|debug|log|dir|error|group|groupCollapsed|groupEnd|info|log|time|timeEnd|trace|warn)\b</string>
+			<key>name</key>
+			<string>console.roy</string>
 		</dict>
 		<dict>
 			<key>include</key>
@@ -159,6 +201,18 @@
 					<string>\b(true|false)\b</string>
 					<key>name</key>
 					<string>constant.language.boolean.roy</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b(data|let|type)\b</string>
+					<key>name</key>
+					<string>keyword.roy</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b(case|do|else|if|match|then)\b</string>
+					<key>name</key>
+					<string>keyword.control.roy</string>
 				</dict>
 			</array>
 		</dict>
