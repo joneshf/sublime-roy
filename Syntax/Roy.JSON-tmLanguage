@@ -34,7 +34,7 @@
     },
     {
       "name": "lambda.roy",
-      "match": "\\s*(\\\\)\\s*(.+?)*\\s*(->)\\s*",
+      "match": "\\s*(\\\\|λ)\\s*(.+?)*\\s*",
       "captures": {
         "1": { "name": "keyword.other.lambda.roy" },
         "2": { "name": "variable.parameter.roy" },

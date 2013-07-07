@@ -100,7 +100,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\s*(\\)\s*(.+?)*\s*(-&gt;)\s*</string>
+			<string>\s*(\\|λ)\s*(.+?)*\s*</string>
 			<key>name</key>
 			<string>lambda.roy</string>
 		</dict>
