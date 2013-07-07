@@ -199,6 +199,25 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
+							<string>support.type.boolean.roy</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.boolean.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b(Boolean)\.(constructor|toSource|toString|valueOf)\b</string>
+					<key>name</key>
+					<string>function.boolean.roy</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
 							<string>support.type.math.roy</string>
 						</dict>
 						<key>2</key>
@@ -252,7 +271,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(Array|Number|Object|String)\b</string>
+					<string>\b(Array|Boolean|Number|Object|String)\b</string>
 					<key>name</key>
 					<string>support.type.roy</string>
 				</dict>
