@@ -79,7 +79,7 @@
       "patterns": [
         {
           "name": "function.array.roy",
-          "match": "\\b(Array)\\.(concat|constructor|every|filter|forEach|indexOf|isArray|join|lastIndexOf|length|map|pop|push|reduce|reduceRight|reverse|shift|slice|some|sort|splice|toSource|toString|unshift)\\b",
+          "match": "\\b(Array)\\.(concat|constructor|every|filter|forEach|indexOf|isArray|join|lastIndexOf|length|map|pop|prototype|push|reduce|reduceRight|reverse|shift|slice|some|sort|splice|toSource|toString|unshift)\\b",
           "captures": {
             "1": { "name": "support.type.array.roy" },
             "2": { "name": "support.function.array.roy" }
@@ -87,10 +87,18 @@
         },
         {
           "name": "function.boolean.roy",
-          "match": "\\b(Boolean)\\.(constructor|toSource|toString|valueOf)\\b",
+          "match": "\\b(Boolean)\\.(constructor|prototype|toSource|toString|valueOf)\\b",
           "captures": {
             "1": { "name": "support.type.boolean.roy" },
             "2": { "name": "support.function.boolean.roy" }
+          }
+        },
+        {
+          "name": "function.date.roy",
+          "match": "\\b(Date)\\.(constructor|getDate|getDay|getFullYear|getHours|getMilliseconds|getMinutes|getMonth|getSeconds|getTime|getTimezoneOffset|getUTCDate|getUTCDay|getUTCFullYear|getUTCHours|getUTCMilliseconds|getUTCMinutes|getUTCMonth|getUTCSeconds|getYear|now|parse|prototype|setDate|setFullYear|setHours|setMilliseconds|setMinutes|setMonth|setTime|setUTCDate|setUTCFullYear|setUTCHours|setUTCMilliseconds|setUTCMinutes|setUTCMonth|setUTCSeconds|setYear|toDateString|toGMTString|toISOString|toJSON|toLocaleDateString|toLocaleFormat|toLocaleString|toLocaleTimeString|toSource|toString|toTimeString|toUTCString|UTC|valueOf)\\b",
+          "captures": {
+            "1": { "name": "support.type.date.roy" },
+            "2": { "name": "support.function.date.roy" }
           }
         },
         {
@@ -110,6 +118,22 @@
           }
         },
         {
+          "name": "constants.number.roy",
+          "match": "\\b(Number)\\.(MAX_VALUE|MIN_VALUE|NaN|NEGATIVE_INFINITY|POSITIVE_INFINITY)\\b",
+          "captures": {
+            "1": { "name": "support.type.number.roy" },
+            "2": { "name": "support.constant.number.roy" }
+          }
+        },
+        {
+          "name": "function.number.roy",
+          "match": "\\b(Number)\\.(isFinite|isInteger|isNaN|prototype|toExponential|toFixed|toInteger|toLocaleString|toPrecision|toSource|toString|valueOf)\\b",
+          "captures": {
+            "1": { "name": "support.type.number.roy" },
+            "2": { "name": "support.function.number.roy" }
+          }
+        },
+        {
           "name": "function.object.roy",
           "match": "\\b(Object)\\.(__count__|__defineGetter__|__defineSetter__|__lookupGetter__|__lookupSetter__|__noSuchMethod__|__parent__|__proto__|constructor|create|defineProperties|defineProperty|eval|freeze|getOwnPropertyDescriptor|getOwnPropertyNames|getPrototypeOf|hasOwnProperty|is|isExtensible|isFrozen|isPrototypeOf|isSealed|keys|preventExtensions|propertyIsEnumerable|prototype|seal|toLocaleString|toSource|toString|unwatch|valueOf|watch)\\b",
           "captures": {
@@ -118,8 +142,24 @@
           }
         },
         {
+          "name": "function.regexp.roy",
+          "match": "\\b(RegExp)\\.(constructor|exec|global|ignoreCase|lastIndex|multiline|prototype|source|sticky|test|toSource|toString)\\b",
+          "captures": {
+            "1": { "name": "support.type.regexp.roy" },
+            "2": { "name": "support.function.regexp.roy" }
+          }
+        },
+        {
+          "name": "function.string.roy",
+          "match": "\\b(String)\\.(charAt|charCodeAt|concat|constructor|contains|endsWith|fromCharCode|indexOf|lastIndexOf|length|localeCompare|match|prototype|quote|replace|search|slice|split|startsWith|substr|substring|toLocaleLowerCase|toLocaleUpperCase|toLowerCase|toSource|toString|toUpperCase|trim|trimLeft|trimRight|valueOf)\\b",
+          "captures": {
+            "1": { "name": "support.type.string.roy" },
+            "2": { "name": "support.function.string.roy" }
+          }
+        },
+        {
           "name": "support.type.roy",
-          "match": "\\b(Array|Boolean|Number|Object|String)\\b"
+          "match": "\\b(Array|Boolean|Date|(Eval|Range|Reference|Syntax|Type|URI)?Error|Number|Object|RegExp|String)\\b"
         }
       ]
     },

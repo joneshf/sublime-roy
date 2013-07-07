@@ -189,7 +189,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>\b(Array)\.(concat|constructor|every|filter|forEach|indexOf|isArray|join|lastIndexOf|length|map|pop|push|reduce|reduceRight|reverse|shift|slice|some|sort|splice|toSource|toString|unshift)\b</string>
+					<string>\b(Array)\.(concat|constructor|every|filter|forEach|indexOf|isArray|join|lastIndexOf|length|map|pop|prototype|push|reduce|reduceRight|reverse|shift|slice|some|sort|splice|toSource|toString|unshift)\b</string>
 					<key>name</key>
 					<string>function.array.roy</string>
 				</dict>
@@ -208,9 +208,28 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>\b(Boolean)\.(constructor|toSource|toString|valueOf)\b</string>
+					<string>\b(Boolean)\.(constructor|prototype|toSource|toString|valueOf)\b</string>
 					<key>name</key>
 					<string>function.boolean.roy</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>support.type.date.roy</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.date.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b(Date)\.(constructor|getDate|getDay|getFullYear|getHours|getMilliseconds|getMinutes|getMonth|getSeconds|getTime|getTimezoneOffset|getUTCDate|getUTCDay|getUTCFullYear|getUTCHours|getUTCMilliseconds|getUTCMinutes|getUTCMonth|getUTCSeconds|getYear|now|parse|prototype|setDate|setFullYear|setHours|setMilliseconds|setMinutes|setMonth|setTime|setUTCDate|setUTCFullYear|setUTCHours|setUTCMilliseconds|setUTCMinutes|setUTCMonth|setUTCSeconds|setYear|toDateString|toGMTString|toISOString|toJSON|toLocaleDateString|toLocaleFormat|toLocaleString|toLocaleTimeString|toSource|toString|toTimeString|toUTCString|UTC|valueOf)\b</string>
+					<key>name</key>
+					<string>function.date.roy</string>
 				</dict>
 				<dict>
 					<key>captures</key>
@@ -256,6 +275,44 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
+							<string>support.type.number.roy</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.constant.number.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b(Number)\.(MAX_VALUE|MIN_VALUE|NaN|NEGATIVE_INFINITY|POSITIVE_INFINITY)\b</string>
+					<key>name</key>
+					<string>constants.number.roy</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>support.type.number.roy</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.number.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b(Number)\.(isFinite|isInteger|isNaN|prototype|toExponential|toFixed|toInteger|toLocaleString|toPrecision|toSource|toString|valueOf)\b</string>
+					<key>name</key>
+					<string>function.number.roy</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
 							<string>support.type.object.roy</string>
 						</dict>
 						<key>2</key>
@@ -270,8 +327,46 @@
 					<string>function.object.roy</string>
 				</dict>
 				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>support.type.regexp.roy</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.regexp.roy</string>
+						</dict>
+					</dict>
 					<key>match</key>
-					<string>\b(Array|Boolean|Number|Object|String)\b</string>
+					<string>\b(RegExp)\.(constructor|exec|global|ignoreCase|lastIndex|multiline|prototype|source|sticky|test|toSource|toString)\b</string>
+					<key>name</key>
+					<string>function.regexp.roy</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>support.type.string.roy</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.string.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b(String)\.(charAt|charCodeAt|concat|constructor|contains|endsWith|fromCharCode|indexOf|lastIndexOf|length|localeCompare|match|prototype|quote|replace|search|slice|split|startsWith|substr|substring|toLocaleLowerCase|toLocaleUpperCase|toLowerCase|toSource|toString|toUpperCase|trim|trimLeft|trimRight|valueOf)\b</string>
+					<key>name</key>
+					<string>function.string.roy</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b(Array|Boolean|Date|(Eval|Range|Reference|Syntax|Type|URI)?Error|Number|Object|RegExp|String)\b</string>
 					<key>name</key>
 					<string>support.type.roy</string>
 				</dict>
