@@ -180,6 +180,25 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
+							<string>support.type.array.roy</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.array.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b(Array)\.(concat|constructor|every|filter|forEach|indexOf|isArray|join|lastIndexOf|length|map|pop|push|reduce|reduceRight|reverse|shift|slice|some|sort|splice|toSource|toString|unshift)\b</string>
+					<key>name</key>
+					<string>function.array.roy</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
 							<string>support.type.math.roy</string>
 						</dict>
 						<key>2</key>

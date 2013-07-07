@@ -78,6 +78,14 @@
     "class": {
       "patterns": [
         {
+          "name": "function.array.roy",
+          "match": "\\b(Array)\\.(concat|constructor|every|filter|forEach|indexOf|isArray|join|lastIndexOf|length|map|pop|push|reduce|reduceRight|reverse|shift|slice|some|sort|splice|toSource|toString|unshift)\\b",
+          "captures": {
+            "1": { "name": "support.type.array.roy" },
+            "2": { "name": "support.function.array.roy" }
+          }
+        },
+        {
           "name": "constants.math.roy",
           "match": "\\b(Math)\\.(E|LN2|LN10|LOG2E|LOG10E|PI|SQRT1_2|SQRT2)\\b",
           "captures": {
