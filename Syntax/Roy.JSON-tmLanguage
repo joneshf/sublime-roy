@@ -78,10 +78,6 @@
     "class": {
       "patterns": [
         {
-          "name": "support.type.roy",
-          "match": "\\b(Array|Number|Object|String)\\b"
-        },
-        {
           "name": "constants.math.roy",
           "match": "\\b(Math)\\.(E|LN2|LN10|LOG2E|LOG10E|PI|SQRT1_2|SQRT2)\\b",
           "captures": {
@@ -96,6 +92,18 @@
             "1": { "name": "support.type.math.roy" },
             "2": { "name": "support.function.math.roy" }
           }
+        },
+        {
+          "name": "function.object.roy",
+          "match": "\\b(Object)\\.(__count__|__defineGetter__|__defineSetter__|__lookupGetter__|__lookupSetter__|__noSuchMethod__|__parent__|__proto__|constructor|create|defineProperties|defineProperty|eval|freeze|getOwnPropertyDescriptor|getOwnPropertyNames|getPrototypeOf|hasOwnProperty|is|isExtensible|isFrozen|isPrototypeOf|isSealed|keys|preventExtensions|propertyIsEnumerable|prototype|seal|toLocaleString|toSource|toString|unwatch|valueOf|watch)\\b",
+          "captures": {
+            "1": { "name": "support.type.object.roy" },
+            "2": { "name": "support.function.object.roy" }
+          }
+        },
+        {
+          "name": "support.type.roy",
+          "match": "\\b(Array|Number|Object|String)\\b"
         }
       ]
     },

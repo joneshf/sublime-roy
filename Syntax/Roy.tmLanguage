@@ -175,12 +175,6 @@
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>match</key>
-					<string>\b(Array|Number|Object|String)\b</string>
-					<key>name</key>
-					<string>support.type.roy</string>
-				</dict>
-				<dict>
 					<key>captures</key>
 					<dict>
 						<key>1</key>
@@ -217,6 +211,31 @@
 					<string>\b(Math)\.(abs|acos|asin|atan|atan2|ceil|cos|exp|floor|imul|log|max|min|pow|random|round|sin|sqrt|tan|toSource)\b</string>
 					<key>name</key>
 					<string>function.math.roy</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>support.type.object.roy</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.object.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b(Object)\.(__count__|__defineGetter__|__defineSetter__|__lookupGetter__|__lookupSetter__|__noSuchMethod__|__parent__|__proto__|constructor|create|defineProperties|defineProperty|eval|freeze|getOwnPropertyDescriptor|getOwnPropertyNames|getPrototypeOf|hasOwnProperty|is|isExtensible|isFrozen|isPrototypeOf|isSealed|keys|preventExtensions|propertyIsEnumerable|prototype|seal|toLocaleString|toSource|toString|unwatch|valueOf|watch)\b</string>
+					<key>name</key>
+					<string>function.object.roy</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b(Array|Number|Object|String)\b</string>
+					<key>name</key>
+					<string>support.type.roy</string>
 				</dict>
 			</array>
 		</dict>
