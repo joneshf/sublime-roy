@@ -102,6 +102,14 @@
           }
         },
         {
+          "name": "function.json.roy",
+          "match": "\\b(JSON)\\.(parse|stringify)\\b",
+          "captures": {
+            "1": { "name": "support.type.json.roy" },
+            "2": { "name": "support.function.json.roy" }
+          }
+        },
+        {
           "name": "constants.math.roy",
           "match": "\\b(Math)\\.(E|LN2|LN10|LOG2E|LOG10E|PI|SQRT1_2|SQRT2)\\b",
           "captures": {
@@ -158,6 +166,10 @@
           }
         },
         {
+          "name": "support.function.roy",
+          "match": "\\b(decodeURI(Component)?|encodeURI(Component)?|eval|is(Finite|NaN)|parse(Float|Int))\\b"
+        },
+        {
           "name": "support.type.roy",
           "match": "\\b(Array|Boolean|Date|(Eval|Range|Reference|Syntax|Type|URI)?Error|Number|Object|RegExp|String)\\b"
         }
@@ -179,7 +191,11 @@
       "patterns": [
         {
           "name": "constant.language.boolean.roy",
-          "match": "\\b(true|false)\\b"
+          "match": "\\b(false|true)\\b"
+        },
+        {
+          "name": "constant.language.roy",
+          "match": "\\b(null|this|undefined)\\b"
         },
         {
           "name": "keyword.roy",
@@ -216,6 +232,13 @@
         {
           "name": "binary.operator.roy",
           "match": "\\+|-|\\*|/|%",
+          "captures": {
+            "0": { "name": "keyword.operator.roy" }
+          }
+        },
+        {
+          "name": "unary.operator.roy",
+          "match": "!",
           "captures": {
             "0": { "name": "keyword.operator.roy" }
           }

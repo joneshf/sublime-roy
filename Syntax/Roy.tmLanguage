@@ -237,6 +237,25 @@
 						<key>1</key>
 						<dict>
 							<key>name</key>
+							<string>support.type.json.roy</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.json.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b(JSON)\.(parse|stringify)\b</string>
+					<key>name</key>
+					<string>function.json.roy</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
 							<string>support.type.math.roy</string>
 						</dict>
 						<key>2</key>
@@ -366,6 +385,12 @@
 				</dict>
 				<dict>
 					<key>match</key>
+					<string>\b(decodeURI(Component)?|encodeURI(Component)?|eval|is(Finite|NaN)|parse(Float|Int))\b</string>
+					<key>name</key>
+					<string>support.function.roy</string>
+				</dict>
+				<dict>
+					<key>match</key>
 					<string>\b(Array|Boolean|Date|(Eval|Range|Reference|Syntax|Type|URI)?Error|Number|Object|RegExp|String)\b</string>
 					<key>name</key>
 					<string>support.type.roy</string>
@@ -403,9 +428,15 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b(true|false)\b</string>
+					<string>\b(false|true)\b</string>
 					<key>name</key>
 					<string>constant.language.boolean.roy</string>
+				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b(null|this|undefined)\b</string>
+					<key>name</key>
+					<string>constant.language.roy</string>
 				</dict>
 				<dict>
 					<key>match</key>
@@ -472,6 +503,20 @@
 					<string>\+|-|\*|/|%</string>
 					<key>name</key>
 					<string>binary.operator.roy</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>!</string>
+					<key>name</key>
+					<string>unary.operator.roy</string>
 				</dict>
 			</array>
 		</dict>
