@@ -54,6 +54,11 @@
 					<key>name</key>
 					<string>keyword.other.let.roy</string>
 				</dict>
+				<key>10</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.roy</string>
+				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
@@ -76,7 +81,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(let)\s+(.+?)(\s+\(?\s*((.+?)(\s*:\s+(.+?))?)\s*\)?\s+)*(\s*:\s+(.+?))?\s*=</string>
+			<string>(let)\s+(.+?)(\s+\(?\s*((.+?)(\s*:\s*(.+?))?)\s*\)?\s+)*(\s*:\s*(.+?))?\s*(=)</string>
 			<key>name</key>
 			<string>let.binding.roy</string>
 		</dict>
@@ -119,7 +124,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(type)\s+(.+?)\s+=</string>
+			<string>(type)\s+([^=\s]+)\s*</string>
 			<key>name</key>
 			<string>type.roy</string>
 		</dict>
@@ -129,41 +134,26 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>support.function.math.roy</string>
+					<string>keyword.other.data.roy</string>
 				</dict>
-			</dict>
-			<key>match</key>
-			<string>\bMath\.(abs|acos|asin|atan|atan2|ceil|cos|exp|floor|imul|log|max|min|pow|random|round|sin|sqrt|tan|toSource)\b</string>
-			<key>name</key>
-			<string>function.math.roy</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
+				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>support.constant.math.roy</string>
+					<string>entity.name.type.roy</string>
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\bMath\.(E|LN2|LN10|LOG2E|LOG10E|PI|SQRT1_2|SQRT2)\b</string>
+			<string>(data)\s+([^=\s]+)\s*</string>
 			<key>name</key>
-			<string>constants.math.roy</string>
+			<string>data.roy</string>
 		</dict>
 		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>support.function.console.roy</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>\bconsole\.(assert|debug|log|dir|error|group|groupCollapsed|groupEnd|info|log|time|timeEnd|trace|warn)\b</string>
-			<key>name</key>
-			<string>console.roy</string>
+			<key>include</key>
+			<string>#class</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#console</string>
 		</dict>
 		<dict>
 			<key>include</key>
@@ -175,7 +165,7 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#class</string>
+			<string>#operators</string>
 		</dict>
 	</array>
 	<key>repository</key>
@@ -186,9 +176,72 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>\b(Array|Function|Int|Number|Object|String)\b</string>
+					<string>\b(Array|Number|Object|String)\b</string>
 					<key>name</key>
 					<string>support.type.roy</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>support.type.math.roy</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.constant.math.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b(Math)\.(E|LN2|LN10|LOG2E|LOG10E|PI|SQRT1_2|SQRT2)\b</string>
+					<key>name</key>
+					<string>constants.math.roy</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>support.type.math.roy</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.math.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b(Math)\.(abs|acos|asin|atan|atan2|ceil|cos|exp|floor|imul|log|max|min|pow|random|round|sin|sqrt|tan|toSource)\b</string>
+					<key>name</key>
+					<string>function.math.roy</string>
+				</dict>
+			</array>
+		</dict>
+		<key>console</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>support.type.console.roy</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.console.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\b(console)\.(assert|debug|log|dir|error|group|groupCollapsed|groupEnd|info|log|time|timeEnd|trace|warn)\b</string>
+					<key>name</key>
+					<string>console.roy</string>
 				</dict>
 			</array>
 		</dict>
@@ -210,7 +263,7 @@
 				</dict>
 				<dict>
 					<key>match</key>
-					<string>\b(case|do|else|if|match|then)\b</string>
+					<string>\b(bind|case|do|else|if|match|return|then)\b</string>
 					<key>name</key>
 					<string>keyword.control.roy</string>
 				</dict>
@@ -225,6 +278,48 @@
 					<string>\b([+-]?\d+(\.\d+)?([Ee][+-]?\d+)?)\b</string>
 					<key>name</key>
 					<string>constant.numeric.roy</string>
+				</dict>
+				<dict>
+					<key>comment</key>
+					<string>Magic numbers.</string>
+					<key>match</key>
+					<string>Infinity|NaN</string>
+					<key>name</key>
+					<string>support.constant.roy</string>
+				</dict>
+			</array>
+		</dict>
+		<key>operators</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>=|&lt;-|-&gt;|←|→|⇒</string>
+					<key>name</key>
+					<string>assignment.operator.roy</string>
+				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\+|-|\*|/|%</string>
+					<key>name</key>
+					<string>binary.operator.roy</string>
 				</dict>
 			</array>
 		</dict>

@@ -23,13 +23,14 @@
     },
     {
       "name": "let.binding.roy",
-      "match": "(let)\\s+(.+?)(\\s+\\(?\\s*((.+?)(\\s*:\\s+(.+?))?)\\s*\\)?\\s+)*(\\s*:\\s+(.+?))?\\s*=",
+      "match": "(let)\\s+(.+?)(\\s+\\(?\\s*((.+?)(\\s*:\\s*(.+?))?)\\s*\\)?\\s+)*(\\s*:\\s*(.+?))?\\s*(=)",
       "captures": {
         "1": { "name": "keyword.other.let.roy" },
         "2": { "name": "entity.name.function.roy" },
         "5": { "name": "variable.parameter.roy" },
         "7": { "name": "entity.name.type.roy" },
-        "9": { "name": "entity.name.type.roy" }
+        "9": { "name": "entity.name.type.roy" },
+        "10": { "name": "keyword.operator.roy" }
       }
     },
     {
@@ -43,32 +44,25 @@
     },
     {
       "name": "type.roy",
-      "match": "(type)\\s+(.+?)\\s+=",
+      "match": "(type)\\s+([^=\\s]+)\\s*",
       "captures": {
         "1": { "name": "keyword.other.type.roy" },
         "2": { "name": "entity.name.type.roy" }
       }
     },
     {
-      "name": "function.math.roy",
-      "match": "\\bMath\\.(abs|acos|asin|atan|atan2|ceil|cos|exp|floor|imul|log|max|min|pow|random|round|sin|sqrt|tan|toSource)\\b",
+      "name": "data.roy",
+      "match": "(data)\\s+([^=\\s]+)\\s*",
       "captures": {
-        "1": { "name": "support.function.math.roy"}
+        "1": { "name": "keyword.other.data.roy" },
+        "2": { "name": "entity.name.type.roy" }
       }
     },
     {
-      "name": "constants.math.roy",
-      "match": "\\bMath\\.(E|LN2|LN10|LOG2E|LOG10E|PI|SQRT1_2|SQRT2)\\b",
-      "captures": {
-        "1": { "name": "support.constant.math.roy"}
-      }
+      "include": "#class"
     },
     {
-      "name": "console.roy",
-      "match": "\\bconsole\\.(assert|debug|log|dir|error|group|groupCollapsed|groupEnd|info|log|time|timeEnd|trace|warn)\\b",
-      "captures": {
-        "1": { "name": "support.function.console.roy"}
-      }
+      "include": "#console"
     },
     {
       "include": "#keywords"
@@ -77,10 +71,46 @@
       "include": "#numeric"
     },
     {
-      "include": "#class"
+      "include": "#operators"
     }
   ],
   "repository": {
+    "class": {
+      "patterns": [
+        {
+          "name": "support.type.roy",
+          "match": "\\b(Array|Number|Object|String)\\b"
+        },
+        {
+          "name": "constants.math.roy",
+          "match": "\\b(Math)\\.(E|LN2|LN10|LOG2E|LOG10E|PI|SQRT1_2|SQRT2)\\b",
+          "captures": {
+            "1": { "name": "support.type.math.roy" },
+            "2": { "name": "support.constant.math.roy" }
+          }
+        },
+        {
+          "name": "function.math.roy",
+          "match": "\\b(Math)\\.(abs|acos|asin|atan|atan2|ceil|cos|exp|floor|imul|log|max|min|pow|random|round|sin|sqrt|tan|toSource)\\b",
+          "captures": {
+            "1": { "name": "support.type.math.roy" },
+            "2": { "name": "support.function.math.roy" }
+          }
+        }
+      ]
+    },
+    "console": {
+      "patterns": [
+        {
+          "name": "console.roy",
+          "match": "\\b(console)\\.(assert|debug|log|dir|error|group|groupCollapsed|groupEnd|info|log|time|timeEnd|trace|warn)\\b",
+          "captures": {
+            "1": { "name": "support.type.console.roy" },
+            "2": { "name": "support.function.console.roy" }
+          }
+        }
+      ]
+    },
     "keywords": {
       "patterns": [
         {
@@ -93,7 +123,7 @@
         },
         {
           "name": "keyword.control.roy",
-          "match": "\\b(case|do|else|if|match|then)\\b"
+          "match": "\\b(bind|case|do|else|if|match|return|then)\\b"
         }
       ]
     },
@@ -102,14 +132,29 @@
         {
           "name": "constant.numeric.roy",
           "match": "\\b([+-]?\\d+(\\.\\d+)?([Ee][+-]?\\d+)?)\\b"
+        },
+        {
+          "name": "support.constant.roy",
+          "match": "Infinity|NaN",
+          "comment": "Magic numbers."
         }
       ]
     },
-    "class": {
+    "operators": {
       "patterns": [
         {
-          "name": "support.type.roy",
-          "match": "\\b(Array|Function|Int|Number|Object|String)\\b"
+          "name": "assignment.operator.roy",
+          "match": "=|<-|->|←|→|⇒",
+          "captures": {
+            "0": { "name": "keyword.operator.roy" }
+          }
+        },
+        {
+          "name": "binary.operator.roy",
+          "match": "\\+|-|\\*|/|%",
+          "captures": {
+            "0": { "name": "keyword.operator.roy" }
+          }
         }
       ]
     }
