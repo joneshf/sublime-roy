@@ -204,6 +204,10 @@
         {
           "name": "keyword.control.roy",
           "match": "\\b(bind|case|do|else|if|match|return|then)\\b"
+        },
+        {
+          "name": "keyword.other.roy",
+          "match": "\\b(where|with)\\b"
         }
       ]
     },

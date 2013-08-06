@@ -450,6 +450,12 @@
 					<key>name</key>
 					<string>keyword.control.roy</string>
 				</dict>
+				<dict>
+					<key>match</key>
+					<string>\b(where|with)\b</string>
+					<key>name</key>
+					<string>keyword.other.roy</string>
+				</dict>
 			</array>
 		</dict>
 		<key>numeric</key>
