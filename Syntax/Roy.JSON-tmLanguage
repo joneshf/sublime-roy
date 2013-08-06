@@ -242,6 +242,13 @@
           "captures": {
             "0": { "name": "keyword.operator.roy" }
           }
+        },
+        {
+          "name": "type.operator.roy",
+          "match": "\\|",
+          "captures": {
+            "0": { "name": "keyword.operator.roy" }
+          }
         }
       ]
     }

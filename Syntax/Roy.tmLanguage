@@ -518,6 +518,20 @@
 					<key>name</key>
 					<string>unary.operator.roy</string>
 				</dict>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>keyword.operator.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>\|</string>
+					<key>name</key>
+					<string>type.operator.roy</string>
+				</dict>
 			</array>
 		</dict>
 	</dict>
