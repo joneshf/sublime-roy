@@ -59,6 +59,23 @@
       }
     },
     {
+      "name": "instance.roy",
+      "match": "(instance)\\s+([^=\\s]+)\\s*",
+      "captures": {
+        "1": { "name": "keyword.other.instance.roy" },
+        "2": { "name": "entity.name.type.roy" }
+      }
+    },
+    {
+      "name": "typeclass.roy",
+      "match": "(typeclass)\\s+(.*?)\\s+([^=\\s]+)\\s*",
+      "captures": {
+        "1": { "name": "keyword.other.typeclass.roy" },
+        "2": { "name": "entity.name.type.roy" },
+        "3": { "name": "entity.name.tag.roy" }
+      }
+    },
+    {
       "include": "#class"
     },
     {

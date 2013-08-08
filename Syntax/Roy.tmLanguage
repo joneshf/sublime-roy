@@ -148,6 +148,49 @@
 			<string>data.roy</string>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.instance.roy</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.type.roy</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(instance)\s+([^=\s]+)\s*</string>
+			<key>name</key>
+			<string>instance.roy</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.typeclass.roy</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.type.roy</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.tag.roy</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(typeclass)\s+(.*?)\s+([^=\s]+)\s*</string>
+			<key>name</key>
+			<string>typeclass.roy</string>
+		</dict>
+		<dict>
 			<key>include</key>
 			<string>#class</string>
 		</dict>
