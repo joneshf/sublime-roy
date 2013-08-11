@@ -210,6 +210,10 @@
 			<key>include</key>
 			<string>#operators</string>
 		</dict>
+		<dict>
+			<key>include</key>
+			<string>#prelude</string>
+		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
@@ -580,6 +584,26 @@
 					<string>\|</string>
 					<key>name</key>
 					<string>type.operator.roy</string>
+				</dict>
+			</array>
+		</dict>
+		<key>prelude</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>captures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>support.function.prelude.roy</string>
+						</dict>
+					</dict>
+					<key>match</key>
+					<string>even|flip|id|maybe|not|odd|pred|succ</string>
+					<key>name</key>
+					<string>function.prelude.roy</string>
 				</dict>
 			</array>
 		</dict>

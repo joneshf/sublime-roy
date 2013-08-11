@@ -89,6 +89,9 @@
     },
     {
       "include": "#operators"
+    },
+    {
+      "include": "#prelude"
     }
   ],
   "repository": {
@@ -269,6 +272,17 @@
           "match": "\\|",
           "captures": {
             "0": { "name": "keyword.operator.roy" }
+          }
+        }
+      ]
+    },
+    "prelude": {
+      "patterns": [
+        {
+          "name": "function.prelude.roy",
+          "match": "even|flip|id|maybe|not|odd|pred|succ",
+          "captures": {
+            "0": { "name": "support.function.prelude.roy" }
           }
         }
       ]
