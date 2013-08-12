@@ -601,7 +601,7 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>even|flip|id|maybe|not|odd|pred|succ</string>
+					<string>\b(even|flip|id|maybe|not|odd|pred|succ)\b</string>
 					<key>name</key>
 					<string>function.prelude.roy</string>
 				</dict>

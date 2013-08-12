@@ -280,7 +280,7 @@
       "patterns": [
         {
           "name": "function.prelude.roy",
-          "match": "even|flip|id|maybe|not|odd|pred|succ",
+          "match": "\\b(even|flip|id|maybe|not|odd|pred|succ)\\b",
           "captures": {
             "0": { "name": "support.function.prelude.roy" }
           }
