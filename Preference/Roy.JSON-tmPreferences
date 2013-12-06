@@ -1,0 +1,12 @@
+{
+  "name": "Comments",
+  "scope": "source.roy",
+  "settings": {
+    "shellVariables": [
+      {
+        "name": "TM_COMMENT_START",
+        "value": "// "
+      }
+    ]
+  }
+}
